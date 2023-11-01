@@ -1,65 +1,69 @@
-
 .full-screen-container {
-     
-     display: flex;
-     flex-direction: column;
-   }
-   .container-highlight {
-    flex: 1;
-    position: relative;
-    margin: 10px; /* Adjust the margin as needed */
-    background-color: #f0f0f0; 
-  }
-   .container-left {
-     flex: 1;
-     position: relative;
-     margin: 10px; /* Adjust the margin as needed */
-     background-color: #f0f0f0; 
-     width: 40%;
-   }
+  display: flex;
+  flex-direction: column;
+}
 
-   .container-right {
-    flex: 1;
-    position:relative;
-    margin: 10px; /* Adjust the margin as needed */
-    background-color: #f0f0f0; 
-    width: 60%;/* Add a background color for highlighting */
-  }
+.container-highlight {
+  flex: 1;
+  position: relative;  
+  background-color: #f0f0f0;
+}
 
-  
-   
-   .header-container h4 {
-     padding: 20px; /* Add padding for better visual appearance */
-     box-sizing: border-box;
-     margin: 0;
-   }
-   
-   .form-group input[type="checkbox"] {
-     margin-right: 5px; /* Add margin-right to create space between checkbox and label */
-   }
-   
-   .form-container {
-     text-align: left; /* Align text to the left in the form container */
-     padding: 40px; /* Add padding for better visual appearance */
-     box-sizing: border-box; /* Include padding and border in width calculation */
-     width: 50%;
-        
-   }
-   
-   /* Make text fields full width and align to the left */
-   
-   
-   .add-question-btn {
-     margin-right: 80px;
-   
-      /* Reset margin */
-   }
-   
-   /* Adjust the margin to push the button to the right */
-   .addbutton {
-     width: 100%;
-   }
-   
-   .add-option-btn{
-   margin-right: 40px;
-   }
+* {
+  box-sizing: border-box;
+}
+
+.custom-column,
+.custom-column1,
+.custom-column2 {
+  padding: 20px;
+  height: 400px; /* Should be removed. Only for demonstration */
+  margin: 10px; /* Adjusted the margin */
+}
+
+.custom-column1 {
+  height: 600px; /* Should be removed. Only for demonstration */
+}
+
+.custom-column2 {
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 20px;
+  height: 600px; /* Should be removed. Only for demonstration */
+}
+
+.header-container h4 {
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.footer-container {
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.form-container {
+  text-align: left;
+  padding: 40px;
+  box-sizing: border-box;
+  width: 100%; /* Make the form container full width */
+}
+
+.add-question-btn {
+  margin-right: 80px;
+}
+
+.addbutton {
+  width: 100%;
+}
+
+.add-option-btn {
+  margin-right: 40px;
+}
