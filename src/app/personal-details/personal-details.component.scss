@@ -16,7 +16,7 @@
 .custom-column,
 .custom-column1,
 .custom-column2 {
-  padding: 20px;
+  // padding: 20px;
   height: 400px; /* Should be removed. Only for demonstration */
   margin: 10px; /* Adjusted the margin */
 }
@@ -38,6 +38,11 @@
   margin: 0;
 }
 
+.required::after {
+  content: " *";
+  color: red;
+}
+
 .footer-container {
   padding: 10px;
   box-sizing: border-box;
@@ -45,7 +50,7 @@
   margin: 0;
 }
 
-.form-group input[type="checkbox"] {
+.form-group input[type="radio"] {
   margin-right: 5px;
 }
 
@@ -56,14 +61,7 @@
   width: 100%; /* Make the form container full width */
 }
 
-.add-question-btn {
-  margin-right: 80px;
+.submit-btn {
+  margin-right: 30px;
 }
 
-.addbutton {
-  width: 100%;
-}
-
-.add-option-btn {
-  margin-right: 40px;
-}

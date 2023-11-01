@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <title>Full Screen Questionnaire Form</title>
-  
 </head>
 <body>
 
@@ -20,34 +19,34 @@
     <div class="form-container-inner">
       <div class="form-container">
         <div class="form-group">
-          <h5 for="category">Choose a Country</h5><br/>
+          <h5 for="category" class="required">Choose a Country</h5><br/>
           <div> 
-            <input type="checkbox" id="cat1" name="cat" value="Student Visa">
-            <label for="cat1"> Canada</label><br>
-            <input type="checkbox" id="cat2" name="cat2" value="Permanent Residency">
-            <label for="cat2"> UK</label><br>
-            <input type="checkbox" id="cat3" name="cat3" value="Vistor Visa">
-            <label for="cat3"> U.S.A</label><br> 
-            <input type="checkbox" id="cat4" name="cat4" value="IELTS">
-            <label for="cat4"> Australia</label><br><hr/>
+            <input type="radio" id="Canada" name="Country" value="Canada">
+            <label for="Canada"> Canada</label><br>
+            <input type="radio" id="UK" name="Country" value="UK">
+            <label for="UK"> UK</label><br>
+            <input type="radio" id="USA" name="Country" value="USA">
+            <label for="USA"> U.S.A</label><br> 
+            <input type="radio" id="Australia" name="Country" value="Australia">
+            <label for="Australia"> Australia</label><br><hr/>
           </div>
         </div>   <br> 
         
         <div class="form-group">
-          <h5 for="category">Choose a Category</h5><br/>
+          <h5 for="category" class= "required">Choose a Category</h5><br/>
           <div> 
-            <input type="checkbox" id="cat1" name="cat" value="Student Visa">
+            <input type="radio" id="cat1" name="Category" value="Student Visa">
             <label for="cat1"> Student Visa</label><br>
-            <input type="checkbox" id="cat2" name="cat2" value="Permanent Residency">
+            <input type="radio" id="cat2" name="Category" value="Permanent Residency">
             <label for="cat2"> Permanent Residency</label><br>
-            <input type="checkbox" id="cat3" name="cat3" value="Vistor Visa">
+            <input type="radio" id="cat3" name="Category" value="Vistor Visa">
             <label for="cat3"> Vistor Visa</label><br> 
-            <input type="checkbox" id="cat4" name="cat4" value="IELTS">
+            <input type="radio" id="cat4" name="Category" value="IELTS">
             <label for="cat4"> IELTS</label><br>
-            <input type="checkbox" id="cat5" name="cat5" value="Investor Visa">
+            <input type="radio" id="cat5" name="Category" value="Investor Visa">
             <label for="cat5"> Investor Visa</label><br>
             <div class="form-inline"> 
-              <input type="checkbox" id="cat6" name="cat6" value="Others">
+              <input type="radio" id="cat6" name="Category" value="Others">
               <label for="cat6"> Others : </label>
               <input type="text" style="margin-left: 5px;" id="title" formControlName="title" class="form-control" placeholder="Specify reason here"/>
             </div>
@@ -58,93 +57,97 @@
     </div>
 
   <div class="col-md-8 custom-column2 container-highlight">
-    <h5 for="category">Fill in correct detail</h5><br/>
+    <h5 for="category">Fill in correct details</h5><br/>
     <div class="row"> 
-      <div class="col-md-2"> Name: </div>
+      <div class="col-md-2 required"> Full Name: </div>
       <div class="col-md-5"> 
       <input type="text " id="title" formControlName="title" class="form-control" />
     </div>
-    <div class="col-md-2">Date: </div>
+    <div class="col-md-2 required">Date: </div>
       <div class="col-md-3"> 
-      <input type="text" id="title" formControlName="title" class="form-control" />
+      <input type="date" id="title" formControlName="title" class="form-control" />
     </div></div><br/>
 
   <div class="row"> 
     <div class="col-md-2">Reffered By : </div>
     <div class="col-md-5"> 
-    <input type="text " id="title" formControlName="title" class="form-control" />
+    <input type="text" id="title" formControlName="title" class="form-control" />
   </div>
   <div class="col-md-2">Reference Contact : </div>
     <div class="col-md-3"> 
-    <input type="text" id="title" formControlName="title" class="form-control" />
+    <input type="text" id="title" formControlName="title" class="form-control" placeholder="Enter 10 digits only" />
   </div></div><br/>
 
 
   <div class="row"> 
-    <div class="col-md-2"> Date of Birth: </div>
+    <div class="col-md-2 required"> Date of Birth: </div>
     <div class="col-md-5"> 
-    <input type="text " id="title" formControlName="title" class="form-control" />
+    <input type="date" id="title" formControlName="title" class="form-control" />
   </div>
-  <div class="col-md-2">Marital Status: </div>
+  <div class="col-md-2 required">Marital Status: </div>
     <div class="col-md-3"> 
+    <select  id="title" formControlName="title" class="form-control">
+      <option value="" disabled selected></option>
+      <option value="Single ">Single</option>
+      <option value="Married">Married</option>
+      <option value="Divorced">Divorced</option>
+    </select>
+  </div></div><br/>
+
+  <div class="row"> 
+    <div class="col-md-2 required"> Address:  </div>
+    <div class="col-md-10"> 
     <input type="text" id="title" formControlName="title" class="form-control" />
   </div></div><br/>
 
   <div class="row"> 
-    <div class="col-md-2"> Address:  </div>
-    <div class="col-md-10"> 
-    <input type="text " id="title" formControlName="title" class="form-control" />
-  </div></div><br/>
-
-  <div class="row"> 
-    <div class="col-md-2"> Contact: </div>
+    <div class="col-md-2 required"> Contact: </div>
     <div class="col-md-4"> 
-    <input type="text " id="title" formControlName="title" class="form-control" />
+    <input type="text" id="title" formControlName="title" class="form-control" placeholder="Enter 10 digits only" />
   </div>
   <div class="col-md-2"> Alternate Contact: </div>
     <div class="col-md-4"> 
-    <input type="text" id="title" formControlName="title" class="form-control" />
+    <input type="text" id="title" formControlName="title" class="form-control" placeholder="Enter 10 digits only"/>
   </div></div><br/>
 
 
   <div class="row"> 
-    <div class="col-md-2"> Email:  </div>
+    <div class="col-md-2 required"> Email:  </div>
     <div class="col-md-10"> 
     <input type="text " id="title" formControlName="title" class="form-control" />
   </div></div><br/>
 
   <div class="row"> 
-    <div class="col-md-2"> Relatives:  </div>
+    <div class="col-md-2 "> Relatives:  </div>
     <div class="col-md-10"> 
     <input type="text " id="title" formControlName="title" class="form-control" />
   </div></div><br/>
  
 
 <div class="row"> 
-
-  <div class="col-md-2"> IELTS-O/A </div>
+  <div class="required" > IELTS-O/A </div>
   <div class="col-md-2"> 
-  <input type="number " id="title" formControlName="title" class="form-control" />
+  <input type="number" id="title" formControlName="title" class="form-control" />
 </div>
 
-<div class="col-md-1"> L: </div>
-  <div class="col-md-1"> 
-  <input type="number " id="title" formControlName="title" class="form-control" />
+<div> L: </div>
+  <div class="col-md-2"> 
+  <input type="number" id="title" formControlName="title" class="form-control" />
 </div>
 
-<div class="col-md-1"> R: </div>
-  <div class="col-md-1"> 
-  <input type="number " id="title" formControlName="title" class="form-control" />
+<div> R: </div>
+  <div class="col-md-2"> 
+  <input type="number" id="title" formControlName="title" class="form-control" />
 </div>
 
-<div class="col-md-1"> W: </div>
-  <div class="col-md-1"> 
-  <input type="number " id="title" formControlName="title" class="form-control" />
+<div > W: </div>
+  <div class="col-md-2"> 
+  <input type="number" id="title" formControlName="title" class="form-control" />
 </div>
 
-<div class="col-md-1"> S: </div>
-  <div class="col-md-1"> 
-  <input type="number " id="title" formControlName="title" class="form-control" />
+<div> S: </div>
+  <div class="col-md-2"> 
+  <input type="number" id="title" formControlName="title" class="form-control" />
 </div>
 </div>
 </div>
@@ -154,9 +157,9 @@
 <div class="full-screen-container">
   <div class="container-highlight footer-container">
     <div class="row"> 
-      <div class="col-xl-10"></div>
+      <div class="col-xl-10 " style="color: red; ">Fill all the necessary fields marked * </div>
       <div class="col-md-2 text-right">  <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary submit-btn">Submit</button>
       </div>
     </div><br>
   </div>
