@@ -1,0 +1,65 @@
+
+.full-screen-container {
+     
+     display: flex;
+     flex-direction: column;
+   }
+   .container-highlight {
+    flex: 1;
+    position: relative;
+    margin: 10px; /* Adjust the margin as needed */
+    background-color: #f0f0f0; 
+  }
+   .container-left {
+     flex: 1;
+     position: relative;
+     margin: 10px; /* Adjust the margin as needed */
+     background-color: #f0f0f0; 
+     width: 40%;
+   }
+
+   .container-right {
+    flex: 1;
+    position:relative;
+    margin: 10px; /* Adjust the margin as needed */
+    background-color: #f0f0f0; 
+    width: 60%;/* Add a background color for highlighting */
+  }
+
+  
+   
+   .header-container h4 {
+     padding: 20px; /* Add padding for better visual appearance */
+     box-sizing: border-box;
+     margin: 0;
+   }
+   
+   .form-group input[type="checkbox"] {
+     margin-right: 5px; /* Add margin-right to create space between checkbox and label */
+   }
+   
+   .form-container {
+     text-align: left; /* Align text to the left in the form container */
+     padding: 40px; /* Add padding for better visual appearance */
+     box-sizing: border-box; /* Include padding and border in width calculation */
+     width: 50%;
+        
+   }
+   
+   /* Make text fields full width and align to the left */
+   
+   
+   .add-question-btn {
+     margin-right: 80px;
+   
+      /* Reset margin */
+   }
+   
+   /* Adjust the margin to push the button to the right */
+   .addbutton {
+     width: 100%;
+   }
+   
+   .add-option-btn{
+   margin-right: 40px;
+   }

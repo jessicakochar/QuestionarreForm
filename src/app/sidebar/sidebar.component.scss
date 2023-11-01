@@ -1,0 +1,40 @@
+/* sidebar.component.css */
+.navbar-header {
+     display: flex;
+     align-items: center;
+     margin-bottom: 20px; /* Add some space below the header */
+   }
+   
+   .navbar-header i {
+     margin-right: 10px; /* Add some space between the icon and heading */
+   }
+   
+   .navbar-header h4 {
+     margin: 0; /* Remove default margin to ensure precise alignment */
+   }
+   
+   .sidebar-items {
+     display: flex;
+     flex-direction: column; /* Stack items vertically */
+   }
+   
+   .sidebar-item {
+     display: flex;
+     align-items: center; /* Align items vertically within each sidebar item */
+     // margin-bottom: 10px; /* Add space below each item */
+   }
+
+   .sidebar-item a:hover {
+    color: grey;
+   }
+   
+   .sidebar-item i {
+     margin-right: 10px; /* Add some space between the icon and the link */
+   }
+   
+   .sidebar-item a {
+     text-decoration: none; /* Remove default link underline */
+     color: black; /* Set the link color */
+     text-decoration: solid;
+   }
+   

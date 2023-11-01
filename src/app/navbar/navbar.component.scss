@@ -1,0 +1,13 @@
+/* navbar.component.css */
+.navbar {
+     background-color: #000; /* Set the background color to black */
+     color: #fff; /* Set the text color to white */
+     padding: 30px;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+   }
+   
+   .title {
+     margin-left: 20px; /* Add some margin to separate the title from the left edge */
+   }

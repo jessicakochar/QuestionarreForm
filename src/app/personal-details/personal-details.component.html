@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Full Screen Questionnaire Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Adjusted the margin */
+    .custom-column {
+      padding: 5px;
+      height: 400px; /* Should be removed. Only for demonstration */
+    }
+
+    .custom-column1 {
+      padding: 5px;
+      height: 300px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Adjusted the margin */
+    .custom-column2 {
+      padding: 5px;
+      height: 300px; /* Should be removed. Only for demonstration */
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="full-screen-container">
+  <div class="container-highlight header-container">
+    <h4>Fill in your Personal-Details</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 custom-column1 container-highlight">
+    <div class="form-container-inner">
+      <div class="form-container">
+        <div class="form-group">
+          <h5 for="category">Choose a Country</h5><br/>
+          <div> 
+            <input type="checkbox" id="cat1" name="cat" value="Student Visa">
+            <label for="cat1"> Canada</label><br>
+            <input type="checkbox" id="cat2" name="cat2" value="Permanent Residency">
+            <label for="cat2"> UK</label><br>
+            <input type="checkbox" id="cat3" name="cat3" value="Vistor Visa">
+            <label for="cat3"> U.S.A</label><br> 
+            <input type="checkbox" id="cat4" name="cat4" value="IELTS">
+            <label for="cat4"> Australia</label><br>
+          </div>
+        </div>       
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8 custom-column2 container-highlight">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-4 custom-column container-highlight">
+    <div class="form-container-inner">
+      <div class="form-container">
+        <div class="form-group">
+          <h5 for="category">Choose a Category</h5><br/>
+          <div> 
+            <input type="checkbox" id="cat1" name="cat" value="Student Visa">
+            <label for="cat1"> Student Visa</label><br>
+            <input type="checkbox" id="cat2" name="cat2" value="Permanent Residency">
+            <label for="cat2"> Permanent Residency</label><br>
+            <input type="checkbox" id="cat3" name="cat3" value="Vistor Visa">
+            <label for="cat3"> Vistor Visa</label><br> 
+            <input type="checkbox" id="cat4" name="cat4" value="IELTS">
+            <label for="cat4"> IELTS</label><br>
+            <input type="checkbox" id="cat5" name="cat5" value="Investor Visa">
+            <label for="cat5"> Investor Visa</label><br>
+            <div class="form-inline"> 
+              <input type="checkbox" id="cat6" name="cat6" value="Others">
+              <label for="cat6"> Others : </label>
+              <input type="text" style="margin-left: 5px;" id="title" formControlName="title" class="form-control" placeholder="Specify reason here"/>
+            </div><br>
+            <div class="col-md-2">      
+              <button type="submit" class="btn btn-primary">Submit</button>
+      </div><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
