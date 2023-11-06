@@ -7,10 +7,53 @@
   <title>Full Screen Questionnaire Form</title>
 </head>
 <body>
-  <div class="full-screen-container">
-     <div class="form-container">
-     <h2> Education works </h2>
-     </div>
+
+<div class="full-screen-container">
+  <div class="container-highlight header-container">
+    <h4> Education Details</h4>
   </div>
+</div><br>
+
+   <!-- Title Container -->
+   <div class="container-highlight title-container">
+    <div class="form-container-inner">
+      <!-- Add title and introduction text with text area here -->
+      <div class="form-container">
+
+        <div class="form-group" >
+          <label for="title" class="required">Course/Degree Name:</label>
+          <input type="text" id="title" formControlName="title" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="introduction" class="required">University/College Name:</label>
+          <input type="text" id="title" formControlName="title" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="introduction" class="required">Passing Year</label>
+          <input type="text" id="title" formControlName="title" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label for="introduction" class="required">Percentage/GPA</label>
+          <input type="text" id="title" formControlName="title" class="form-control" />
+        </div>
+
+      </div>
+    </div>
+</div><br>
+
+<div class="full-screen-container">
+  <div class="container-highlight footer-container">
+    <div class="row"> 
+      <div class="col-xl-10 " style="color: red; ">Fill all the necessary fields marked * </div>
+      <div class="col-md-2 text-right">  <br>
+        <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+      </div>
+    </div><br>
+  </div>
+</div>
+
 </body>
 </html>

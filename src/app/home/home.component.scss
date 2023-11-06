@@ -1,0 +1,49 @@
+body, html {
+     margin: 0;
+   }
+
+   .full-screen-container {
+     display: flex;
+     flex-direction: column;
+   }
+
+   .screen-container {
+     width: 50%;
+     margin: auto; /* Center the container horizontally */
+   }
+
+   .container-highlight {
+     flex: 1;
+     position: relative;
+     margin: 10px;
+     background-color: #f0f0f0;
+   }
+
+   .header-container h2{
+     padding: 40px;
+     padding-right: 10px;
+     box-sizing: border-box;
+     margin: 0;
+   }
+
+   .header-container p {
+     padding-top: 50px;
+     box-sizing: border-box;
+     margin: 0;
+   }
+
+   .form-container {
+     box-sizing: border-box;
+     padding: 40px;
+     text-align: left; /* Align text to the left in the form container */
+   }
+
+   .form-container label {
+     display: block;
+     margin-bottom: 5px;
+   }
+
+   /* Add some spacing to the submit button */
+   .form-container button {
+     margin-top: 15px;
+   }

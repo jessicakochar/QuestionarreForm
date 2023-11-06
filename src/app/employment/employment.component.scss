@@ -1,0 +1,75 @@
+.full-screen-container {
+     display: flex;
+     flex-direction: column;
+   }
+   
+   .container-highlight {
+     flex: 1;
+     position: relative;  
+     background-color: #f0f0f0;
+   }
+   
+   * {
+     box-sizing: border-box;
+   }
+   
+   .custom-column,
+   .custom-column1,
+   .custom-column2 {
+     // padding: 20px;
+     height: 400px; /* Should be removed. Only for demonstration */
+     margin: 10px; /* Adjusted the margin */
+   }
+   
+   .custom-column1 {
+     height: 600px; /* Should be removed. Only for demonstration */
+   }
+   
+   .custom-column2 {
+     padding-top: 40px;
+     padding-left: 40px;
+     padding-right: 20px;
+     height: 600px; /* Should be removed. Only for demonstration */
+   }
+   
+   .header-container h4 {
+     padding: 20px;
+     box-sizing: border-box;
+     margin: 0;
+   }
+   
+   .required::after {
+     content: " *";
+     color: red;
+   }
+   
+   .footer-container {
+     padding: 10px;
+     box-sizing: border-box;
+     align-items: flex-end;
+     margin: 0;
+   }
+   
+   .form-group input[type="radio"] {
+     margin-right: 5px;
+   }
+   
+   .form-container {
+     text-align: left;
+     padding: 40px;
+     box-sizing: border-box;
+     width: 100%; /* Make the form container full width */
+   }
+   
+   
+   .form-container h6 {
+     text-align: center;
+     padding: 40px;
+     box-sizing: border-box;
+     width: 100%; /* Make the form container full width */
+   }
+   .submit-btn {
+     margin-right: 30px;
+   }
+   
+   

@@ -4,13 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <title>Full Screen Questionnaire Form</title>
+   
 </head>
 <body>
+
   <div class="full-screen-container">
-     <div class="form-container">
-     <h2> Home works </h2>
-     </div>
+    <div class="container-highlight header-container">
+      <div class="row">
+        <h2>I A L F |</h2>
+        <p>Immigration Advisory Law Firm</p>
+      </div>
+    </div>
   </div>
+
+  <div class="screen-container">
+    <div class="container-highlight">
+      <div class="form-container">
+        <div class="form-group">
+          <h5>CLIENT ASSESSMENT FORM</h5>
+          <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" formControlName="email" class="form-control" />
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" formControlName="password" class="form-control" />
+          </div>
+
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div></form>
+      </div></div>
+    </div>
+  </div>
+
+
+  
+  <div class="full-screen-container" style="padding-top: 150px;">
+    <div class="container-highlight">
+      <div class="row">
+        <p style="color: red; padding: 50px;"> Note: 1st consultation is free (max 15 mins) , after 1st visit rs 500/- per visit</p>
+
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
