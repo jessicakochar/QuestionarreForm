@@ -10,14 +10,19 @@
 
 <div class="full-screen-container">
   <div class="container-highlight header-container">
+    <div class="row"> 
+      <div class="col-xl-10"> 
     <h4> Education Details</h4>
+  </div>
+    <div class="col-md-2 text-right" style="padding: 20px; padding-right: 50px;" > 
+    <button class="btn btn-primary mr-2;"  (click)="addEducation()">Add education</button>
+  </div>
+</div>
   </div>
 </div><br>
 
-   <!-- Title Container -->
    <div class="container-highlight title-container">
     <div class="form-container-inner">
-      <!-- Add title and introduction text with text area here -->
       <div class="form-container">
 
         <div class="form-group" >
@@ -44,18 +49,56 @@
     </div>
 </div><br>
 
+<div *ngFor="let education of educations.controls; let i = index">
+<div class="container-highlight title-container">
+  <form [formGroup]="questionnaireForm" (ngSubmit)="onSubmit()">
+  <div class="form-container-inner">
+      <div formArrayName="educations">
+          <div [formGroupName]="i">
+            <div class="form-container">
+              <div class="form-group">
+                <div class="row"> 
+                  <div class="col-xl-10">
+                <label for="courseName" class="required">Course/Degree Name {{i+2}}:</label>
+                  </div>
+               <div class=" col-md-2 text-right" (click)="removeEducation(i)">
+                <button class="btn btn-sm"> X </button> 
+               </div> 
+              </div>
+                <input type="text" id="courseName" formControlName="courseName" class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label for="universityName" class="required">University/College Name:</label>
+                <input type="text" id="universityName" formControlName="universityName" class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label for="passingYear" class="required">Passing Year</label>
+                <input type="text" id="passingYear" formControlName="passingYear" class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label for="percentageGPA" class="required">Percentage/GPA</label>
+                <input type="text" id="percentageGPA" formControlName="percentageGPA" class="form-control" />
+              </div>
+            </div>
+          </div></div></div>
+    </form>
+  </div>
+</div><br>
+
+
 <div class="full-screen-container">
   <div class="container-highlight footer-container">
     <div class="row"> 
       <div class="col-xl-10" style="color: red; margin-bottom: 10px;">Fill all the necessary fields marked * </div>
       <div class="col-md-2 text-right"><br>
-        <button class="btn btn-primary mr-2">Add education</button>
         <button type="submit" class="btn btn-primary submit-btn">Submit</button>
       </div>
     </div>
   </div>
 </div>
-
 
 </body>
 </html>
