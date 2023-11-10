@@ -50,7 +50,7 @@
 </div><br>
 
 <div *ngFor="let education of educations.controls; let i = index">
-<div class="container-highlight title-container">
+<div class="container-highlight title-container education-entry">
   <form [formGroup]="questionnaireForm" (ngSubmit)="onSubmit()">
   <div class="form-container-inner">
       <div formArrayName="educations">
@@ -94,7 +94,7 @@
     <div class="row"> 
       <div class="col-xl-10" style="color: red; margin-bottom: 10px;">Fill all the necessary fields marked * </div>
       <div class="col-md-2 text-right"><br>
-        <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+        <a routerLink="/employment"><button type="submit" class="btn btn-primary submit-btn ">Submit</button></a>
       </div>
     </div>
   </div>

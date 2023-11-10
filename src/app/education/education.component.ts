@@ -1,6 +1,7 @@
 // education.component.ts
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-education',
@@ -12,7 +13,8 @@ export class EducationComponent {
 
   constructor(
     private fb: FormBuilder,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private router: Router,
     ) {
     this.initializeForm();
   }
@@ -45,6 +47,8 @@ export class EducationComponent {
     this.educations.removeAt(index);
   }
   onSubmit() {
+    this.router.navigate(['/employment']);
+
     console.log(this.questionnaireForm.value);
   }
 }

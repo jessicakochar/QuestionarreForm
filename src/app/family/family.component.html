@@ -10,7 +10,14 @@
 
 <div class="full-screen-container">
   <div class="container-highlight header-container">
+    <div class="row"> 
+      <div class="col-xl-10"> 
     <h4> Family Details</h4>
+  </div>
+    <div class="col-md-2 text-right" style="padding: 20px; padding-right: 50px;" > 
+    <button class="btn btn-primary mr-2;"  (click)="addMember()">Add Member</button>
+  </div>
+</div>
   </div>
 </div><br>
 
@@ -18,84 +25,179 @@
     <div class="form-container-inner">
       <div class="form-container">
 
-        <div class="row"> 
+        <div class="row">
           <div class="col-md-6"> 
         <div class="form-group" >
           <label for="title" class="required">Family Member Name:</label>
           <input type="text" id="title" formControlName="title" class="form-control" />
-        </div>
-      </div>
+        </div></div>
 
-      <div class="col-md-6"> 
-        <div class="form-group" >
-          <label for="title" class="required">Family Member Contact:</label>
+        <div class="col-md-6"> 
+        <div class="form-group">
+          <label for="introduction" class="required">Family Member Contact:</label>
           <input type="text" id="title" formControlName="title" class="form-control" />
-        </div>
+        </div></div>
       </div>
-    </div>
-
-    <div class="row"> 
-      <div class="col-md-5"> 
-    <div class="form-group" >
-      <label for="title" class="required">Relationship</label>
-      <input type="text" id="title" formControlName="title" class="form-control" />
-    </div>
-  </div>
-
-  <div class="col-md-5"> 
-    <div class="form-group">
-      <label for="introduction" class="required">Occupation</label>
-      <input type="text" id="title" formControlName="title" class="form-control" />
-    </div>
-  </div>
-
-  <div class="col-md-2"> 
-    <div class="form-group">
-      <label for="introduction" class="required">D.O.B</label>
-      <input type="date" id="title" formControlName="title" class="form-control" />
-    </div>
-    </div>
-</div> 
-
-<div class="form-group">
-  <label for="introduction" class="required">Address</label>
-  <input type="text" id="title" formControlName="title" class="form-control"  placeholder="Line 1 - house,street,locality"/><br>
-  <input type="text" id="title" formControlName="title" class="form-control" placeholder=" Line 2- landmark (if any)" />
-</div>
 
 
-<div class="row"> 
-  <div class="col-md-6"> 
-<div class="form-group" >
-  <label for="title" class="required">City</label>
-  <input type="text" id="title" formControlName="title" class="form-control" />
-</div>
-</div>
+        <div class="form-group">
+          <label for="introduction" class="required">Address: </label>
+          <textarea type="text" id="title" formControlName="title" class="form-control" ></textarea>
+        </div>
 
-<div class="col-md-6"> 
-<div class="form-group">
-  <label for="introduction" class="required">State</label>
-  <input type="text" id="title" formControlName="title" class="form-control" />
-</div>
-</div>
-</div> 
+        <div class="row"> 
+        <div class="col-md-4"> 
+        <div class="form-group">
+          <label for="title" class="required">City: </label>
+          <input type="text" id="title" formControlName="title" class="form-control" />
+        </div></div>
+ 
+        <div class="col-md-4"> 
+          <div class="form-group">
+            <label for="introduction" class="required">State: </label>
+            <input type="text" id="introduction" formControlName="title" class="form-control" />
+          </div></div> 
 
+          <div class="col-md-4"> 
+            <div class="form-group">
+              <label for="title" class="required">Highest Level of Education: </label>
+              <input type="text" id="title" formControlName="title" class="form-control" />
+            </div>
+          </div>
+
+      </div>
       </div>
     </div>
 </div><br>
 
+<div *ngFor="let member of members.controls; let i = index">
+  <div class="container-highlight title-container education-entry">
+  <form [formGroup]="questionnaireForm">
+  <div class="container-highlight title-container">
+      <div class="form-container-inner">
+        <div formArrayName="members">
+          <div [formGroupName]="i">
+            <div class="form-container">
+
+              <div class="form-group">
+                <div class="row"> 
+                  <div class="col-xl-10"></div>
+                  
+               <div class=" col-md-2 text-right" (click)="removeMember(i)">
+                <button class="btn btn-sm"> X </button> 
+               </div> 
+              </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="memberName" class="required">Family Member Name:</label>
+                    <input type="text" id="memberName" formControlName="memberName" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="memberContact" class="required">Family Member Contact:</label>
+                    <input type="text" id="memberContact" formControlName="memberContact" class="form-control" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-5"> 
+                 <div class="form-group">
+                  <label for="relation" class="required">Relationship:</label>
+                  <input type="text" id="relation" formControlName="relation" class="form-control" />
+                </div>
+              </div>
+
+              <div class="col-md-5"> 
+                <div class="form-group">
+                 <label for="occupation" class="required">Occupation </label>
+                 <input type="text" id="occupation" formControlName="occupation" class="form-control" />
+               </div>
+             </div>
+
+              <div class="col-md-2"> 
+                <div class="form-group">
+                  <label for="dob" class="required">D.O.B: </label>
+                  <input type="date" id="dob" formControlName="dob" class="form-control" />
+                </div>
+              </div>
+            </div>
+
+                <div class="form-group">
+                  <label for="address" class="required">Address: </label>
+                  <textarea type="text" id="address" formControlName="address" class="form-control" ></textarea>
+                </div>
+
+              <div class="row">
+                <div class="col-md-4"> 
+                  <div class="form-group">
+                   <label for="city" class="required">City:</label>
+                  <input type="text" id="city" formControlName="city" class="form-control" />
+                </div>
+              </div>
+
+              <div class="col-md-4"> 
+              <div class="form-group">
+                <label for="state" class="required">State: </label>
+                <input type="text" id="state" formControlName="state" class="form-control" />
+              </div>
+            </div>
+
+            <div class="col-md-4"> 
+              <div class="form-group">
+                <label for="education" class="required">Highest Level of Education: </label>
+                <input type="text" id="education" formControlName="education" class="form-control" />
+              </div>
+            </div>
+
+            </div>
+
+          </div>
+          </div>
+        </div>
+      </div></div>
+  </form></div></div>
+
+<br>
+
+
 <div class="full-screen-container">
   <div class="container-highlight footer-container">
     <div class="row"> 
-      <div class="col-xl-8" style="color: red; margin-bottom: 10px;">Fill all the necessary fields marked * </div>
-      <div class="col-md-4 text-right"><br>
-        <button class="btn btn-primary mr-2">Add Family Member</button>
-        <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+      <div class="col-xl-10" style="color: red; margin-bottom: 10px;">Fill all the necessary fields marked * </div>
+      <div class="col-md-2 text-right"><br>
+        <button type="submit" class="btn btn-primary submit-btn" (ngSubmit)="onSubmit(content)" >Submit</button>
       </div>
     </div>
   </div>
 </div>
 
-
 </body>
 </html>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Declaration</h4>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="questionnaireForm" class="form">
+      <div class="form-group">
+        <label for="name">Declaration</label>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Upload Signature</label>
+        <input formControlName="description" id="description" type="file" class="form-control" />
+      </div>
+      <div class="text-right">
+        <button type="button" class="btn btn-sm btn-outline-danger" (click)="modal.close('Close click')">Cancel</button>
+        <button type="button" class="btn btn-sm btn-outline-dark">Save</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
