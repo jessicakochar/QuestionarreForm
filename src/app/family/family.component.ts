@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
-// import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-family',
@@ -9,12 +9,12 @@ import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 })
 export class FamilyComponent {
   questionnaireForm!: FormGroup;
+  modalReference: any;
 
   constructor(
     private fb: FormBuilder,
-    private cdr: ChangeDetectorRef,
-    // private modalService: NgbModal,
-    ) {
+    private modalService: NgbModal,
+  ) {
     this.initializeForm();
   }
 
@@ -25,7 +25,7 @@ export class FamilyComponent {
   }
 
   get members() {
-    return (this.questionnaireForm.get('members') as FormArray);
+    return this.questionnaireForm.get('members') as FormArray;
   }
 
   addMember() {
@@ -39,21 +39,23 @@ export class FamilyComponent {
         address: [''],
         city: [''],
         state: [''],
-        education:[''],
+        education: [''],
       })
     );
-    this.cdr.detectChanges();
-
   }
-
-
-  
 
   removeMember(index: number) {
     this.members.removeAt(index);
   }
-  onSubmit(content:any) {
-    // this.modalService.open(content, { centered: true });
+
+  openModal(modalRef: any) {
+    this.modalReference = this.modalService.open(modalRef, { size: "md", centered: false });
+    // this.initializeForm();
+  }
+
+  onSubmit() {
+    // Open the modal on form submission
+    // this.openModal(content);
     console.log(this.questionnaireForm.value);
   }
 }
